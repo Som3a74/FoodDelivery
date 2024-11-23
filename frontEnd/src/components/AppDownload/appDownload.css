@@ -23,3 +23,9 @@
 .app-download-platforms img:hover{
     transform: scale(1.05);
 }
+
+.app-download-platforms img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}

@@ -22,38 +22,49 @@ const Navbar = ({ setShowLogin }) => {
     <div className="navbar">
       <Link to={"/"}>  <h2 className="logo"> Delli-Food </h2></Link>
       <ul className="navbar-menu">
-        <Link
-          to="/"
-          onClick={() => setMenu("home")}
-          className={menu === "home" ? "active" : ""}
-        >
-          Home
-        </Link>
-        <a
-          href="#explore-menu"
-          onClick={() => setMenu("menu")}
-          className={menu === "menu" ? "active" : ""}
-        ></a>
-        <a
-          href="#app-download"
-          onClick={() => setMenu("mobile-app")}
-          className={menu === "mobile-app" ? "active" : ""}
-        >
-          mobile
-        </a>
+        <li>
+          <Link
+            to="/"
+            onClick={() => setMenu("home")}
+            className={menu === "home" ? "active" : ""}
+          >
+            Home
+          </Link>
+        </li>
 
-        <a
-          href="#footer"
-          onClick={() => setMenu("contact-us")}
-          className={menu === "contact-us" ? "active" : ""}
-        >
-          contact us
-        </a>
+        <li>
+          <a
+            aria-label="explore-menu"
+            href="#explore-menu"
+            onClick={() => setMenu("menu")}
+            className={menu === "menu" ? "active" : ""}
+          ></a>
+        </li>
+
+        <li>
+          <a
+            href="#app-download"
+            onClick={() => setMenu("mobile-app")}
+            className={menu === "mobile-app" ? "active" : ""}
+          >
+            mobile
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#footer"
+            onClick={() => setMenu("contact-us")}
+            className={menu === "contact-us" ? "active" : ""}
+          >
+            contact us
+          </a>
+        </li>
       </ul>
       <div className="navbar-right">
-      
+
         <div className="navbar-search-icon">
-          <Link to="/cart">
+          <Link to="/cart" aria-label="Go to Cart">
             {" "}
             <img src={assets.basket_icon} alt="" />{" "}
           </Link>
