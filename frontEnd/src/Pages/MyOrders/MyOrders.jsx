@@ -3,7 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import "./MyOrders.css";
 import { StoreContext } from "./../../Context/StoreContext";
 import axios from "axios";
-import { assets } from "./../../assets/admin_assets/assets";
+// import { assets } from "./../../assets/admin_assets/assets";
+import parcel_icon from "./../../assets/frontend_assets/parcel_icon.webp";
 
 const MyOrders = () => {
   const { url, token } = useContext(StoreContext);
@@ -31,7 +32,7 @@ const MyOrders = () => {
         {data.map((order, index) => {
           return (
             <div key={index} className="my-orders-order">
-              <img src={assets.parcel_icon} alt="" />
+              <img src={parcel_icon} alt="" />
 
               <p>
                 {order.items.map((item, index) => {
