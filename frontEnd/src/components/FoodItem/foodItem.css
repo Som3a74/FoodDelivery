@@ -10,8 +10,11 @@
 .food-item-image{
     width: 100%;
     height: auto;
-    /* aspect-ratio: 3 / 2; */
     border-radius:15px 15px 0px 0px ;
+    transition: all .6s;
+}
+.food-item-image:hover{
+    transform: scale(1.2);
 }
 
 .food-item-info{
@@ -48,6 +51,8 @@
 
 .food-item-img-container{
     position: relative;
+    overflow: hidden;
+    border-radius:15px 15px 0px 0px ;
 }
 
 .food-item-img-container .add{
